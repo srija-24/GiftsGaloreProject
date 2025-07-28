@@ -1,0 +1,403 @@
+--------------------------------------------------
+INDEXPRODUCT
+
+ 
+
+CREATE TABLE indexproduct (
+    product_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100),
+    price DECIMAL(10,2),
+    description TEXT,
+    buyer_name VARCHAR(100),
+    review TEXT,
+    ratings DECIMAL(3,2),
+    imageUrl VARCHAR(255) DEFAULT NULL
+);
+
+INSERT INTO indexproduct (product_name, price, description, buyer_name, review, ratings, imageUrl)
+VALUES
+    ('Diwali Sweets Box', 550, 
+    'A box of assorted sweets for Diwali. This beautifully packaged box contains a variety of traditional Indian sweets including laddoos, barfis, and jalebis, perfect for celebrating the festival of lights with family and friends. Each sweet is made from high-quality ingredients, ensuring a delightful taste in every bite.', 
+    'Alice Johnson', 'Delicious sweets, perfect for the festival!', 4.5, 'https://assets.winni.in/product/primary/2023/10/90967.jpeg?dpr=1&w=400'),
+
+    ('Christmas Tree', 700, 
+    'A beautiful 6-foot artificial Christmas tree. This tree is designed to look just like a real pine, complete with lush green branches that are perfect for hanging ornaments and lights. It is easy to assemble and disassemble, making it a convenient and hassle-free centerpiece for your holiday decorations.', 
+    'Bob Smith', 'Looks very real and easy to set up.', 4.7, 'https://assets.winni.in/product/primary/2022/11/79394.jpeg?dpr=1&w=400'),
+
+    ('Eid Gift Hamper', 1250, 
+    'A hamper full of traditional Eid delicacies. This festive hamper includes an assortment of treats such as dates, nuts, and sweets, all beautifully arranged in an elegant basket. It is a perfect gift to share with loved ones during the joyous celebration of Eid.', 
+    'Carla Davis', 'Great selection of treats, very festive!', 4.6,'https://assets.winni.in/product/primary/2022/8/72898.jpeg?dpr=1&w=80'),
+
+    ('Halloween Costume', 2300, 
+    'A spooky witch costume for Halloween. This costume includes a long black dress, a pointed hat, and a broomstick, creating a classic witch look. The dress features intricate details and is made from high-quality materials, ensuring it is both comfortable and durable for all your Halloween activities.', 
+    'David Brown', 'Fit perfectly and was a hit at the party.', 4.3, 'https://wannaparty.in/wp-content/uploads/2023/10/1-36.jpg'),
+
+    ('Thanksgiving Turkey', 507, 
+    'A large turkey for Thanksgiving dinner. Chocolate: 5 Dairy Milk Chocolate,10 Dairy Milk Silk Chocolate 60g ,One Cane Basket Thanksgiving meal. It is sourced from high-quality farms and is free from antibiotics and hormones, ensuring a delicious and healthy feast for your family.', 
+    'Ella Wilson', 'Juicy and tender, highly recommend.', 4.8, 'https://assets.winni.in/product/primary/2014/8/37605.jpeg?dpr=1&w=80'),
+
+    ('Hanukkah Menorah', 699, 
+    'A beautiful menorah for Hanukkah celebrations. This elegant menorah is crafted from high-quality materials and features a classic design that will enhance your Hanukkah traditions. It is sturdy and durable, making it a cherished item that you can use year after year.', 
+    'Frank Miller', 'Elegant design, perfect for the occasion.', 4.9, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2n1diOt9_ZoxTd8zTiMmlUjRB8hZ36c5M4w&s'),
+
+    ('New Years Eve Pack', 550, 
+    'A pack of party supplies for New Year\'s Eve. This comprehensive party pack includes decorations, hats, noisemakers, and more, everything you need to throw a fantastic New Year\'s Eve celebration. The high-quality items are sure to create a festive atmosphere and help you ring in the new year with style.', 
+    'Grace Lee', 'Everything we needed for a great party.', 4.4, 'https://assets.winni.in/product/primary/2024/4/95230.jpeg?dpr=1&w=400'),
+
+    ('Valentines Day Roses', 799, 
+    'A dozen red roses for Valentine\'s Day. These fresh, vibrant roses are the perfect way to express your love and affection on Valentines Day. Each bouquet is carefully arranged and packaged to ensure the flowers arrive in perfect condition, making a beautiful and romantic gift for your special someone.', 
+    'Henry Green', 'Fresh and beautiful, my partner loved them.', 4.7, 'https://assets.winni.in/product/primary/2014/8/46812.jpeg?dpr=1&w=400');
+
+-----------------------------------------------------------------------------------------------------
+
+PRODUCT_DIWALI
+
+
+
+
+-- Create product_diwali table
+CREATE TABLE product_diwali (
+    product_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100),
+    price DECIMAL(10,2),
+    description TEXT,
+    buyer_name VARCHAR(100),
+    review TEXT,
+    ratings DECIMAL(3,2),
+    imageUrl VARCHAR(255) DEFAULT NULL
+);
+
+-- Insert sample data into the product_diwali table
+INSERT INTO product_Diwali (product_name, price, description, buyer_name, review, ratings, imageUrl)
+VALUES
+    ('Diwali Dryfruits Delights with Diyas', 1299.00, 'Celebrate Diwali in style with our Diwali Dryfruits Delights with Diyas. This exquisite hamper combines a rich assortment of premium dry fruits with traditional diyas, perfect for gifting or enhancing your festive celebrations. Each diya is intricately crafted to add a touch of elegance and warmth to your Diwali festivities.', 'Emily White', 'Beautiful artwork, captures our story perfectly.', 4.8, 'https://assets.winni.in/product/primary/2023/10/90893.jpeg?dpr=1&w=400'),
+    ('Delicious Diwali Sweets and Nuts Hamper', 999.00, 'Indulge in the essence of Diwali with our Delicious Diwali Sweets and Nuts Hamper. This delightful assortment features a variety of traditional sweets and nuts, meticulously crafted to bring joy and sweetness to your festive gatherings. Perfect for sharing and spreading happiness during Diwali.', 'John Doe', 'High-quality and very practical gifts.', 4.7, 'https://assets.winni.in/product/primary/2023/10/90906.jpeg?dpr=1&w=400'),
+    ('Diwali Mug With Chocolates and Diyas', 899.00, 'Add a touch of sweetness to your Diwali celebrations with our Diwali Mug With Chocolates and Diyas. This charming gift set includes a festive mug filled with delectable chocolates and adorned with traditional diyas, making it an ideal choice for expressing warmth and joy during the festival of lights.', 'Sophia Brown', 'Very fresh and well arranged.', 4.6, 'https://assets.winni.in/product/primary/2023/10/90967.jpeg?dpr=1&w=400'),
+    ('Set of 6 Diyas', 699.00, 'Illuminate your home with our Set of 6 Diyas this Diwali. These contemporary diyas offer a modern twist on a classic Diwali gift, combining elegance with functionality. Perfect for creating a festive ambiance and adding a touch of traditional charm to your decorations.', 'Mike Johnson', 'Elegant and modern, loved by my partner.', 4.5, 'https://assets.winni.in/product/primary/2014/6/27911.jpeg?dpr=1&w=400'),
+    ('Ferrero Rocher With Diwali Diya Delights', 749.00, 'Create a magical ambiance with our Ferrero Rocher With Diwali Diya Delights. This enchanting combination of Ferrero Rocher chocolates and intricately designed diyas is sure to dazzle your senses and delight your loved ones during Diwali. Perfect for those who appreciate unique and elegant gifts.', 'Anna Wilson', 'Creates a magical ambiance, very unique.', 4.4, 'https://assets.winni.in/product/primary/2023/10/90931.jpeg?dpr=1&w=400'),
+    ('Motichoor Laddu with Red Diyas', 599.00, 'Experience the authentic flavors of Diwali with our Motichoor Laddu with Red Diyas. These handmade sweets are a traditional favorite, paired beautifully with vibrant red diyas to create a festive gift that embodies the spirit of Diwali. Ideal for sharing joy and spreading festive cheer.', 'David Miller', 'Very sweet.', 4.9, 'https://assets.winni.in/product/primary/2023/10/90468.jpeg?dpr=1&w=400'),
+    ('Festive Dry Fruits Basket', 1549.00, 'Impress your loved ones with our Festive Dry Fruits Basket this Diwali. Overflowing with delicious dry fruits, beautifully presented in a festive basket, this gift is perfect for celebrating prosperity and togetherness during the festival of lights. An exquisite choice for expressing heartfelt wishes and blessings.', 'Linda Green', 'Delicious Dryfruits, beautifully presented.', 4.6, 'https://assets.winni.in/product/primary/2023/11/91673.jpeg?dpr=1&w=400'),
+    ('Joyful Diwali cake', 799.00, 'Savor the sweetness of Diwali with our Joyful Diwali Cake. Baked to perfection, this delicious cake is adorned with festive decorations, making it a delightful addition to your Diwali celebrations. Whether as a centerpiece or a thoughtful gift, it embodies the joy and spirit of the festival.', 'Chris Taylor', 'Exquisite selection, worth every penny.', 4.8, 'https://assets.winni.in/product/primary/2021/10/54998.jpeg?dpr=1&w=400');
+
+----------------------------------------------------------------------------------------------------------
+
+PRODUCT_CHRISTMAS
+
+
+
+
+
+-- Create products1 table
+CREATE TABLE product_christmas (
+    product_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100),
+    price DECIMAL(10,2),
+    description TEXT,
+    buyer_name VARCHAR(100),
+    review TEXT,
+    ratings DECIMAL(3,2),
+    imageUrl VARCHAR(255) DEFAULT NULL
+);
+
+-- Insert Christmas gifts data into products1
+INSERT INTO product_christmas (product_name, price, description, buyer_name, review, ratings, imageUrl)
+VALUES
+    ('Christmas Cap', 19.99, 'Add festive charm to your Christmas tree with this set of 12 assorted Christmas tree ornaments. Each ornament is intricately designed to bring holiday cheer to your home.', 'OrnamentEnthusiast2023', 'Beautiful and festive!', 4.5, 'https://assets.winni.in/product/primary/2014/8/35658.jpeg?dpr=1&w=500'),
+    ('Christmas Butterscotch Cake', 69.99, 'Indulge in the holiday spirit with this deluxe assortment of gourmet treats. Perfect for sharing, this Christmas cake is rich in flavor and sure to delight.', 'GourmetLover2023', 'Decadent and delightful!', 4.7, 'https://assets.winni.in/product/primary/2022/12/80330.jpeg?dpr=1&w=80'),
+    ('Pack Of 4 Christmas Mix Dry Fruits Chocolates', 49.99, 'Stay warm and cozy during Christmas with this knit throw blanket. Its soft texture and vibrant colors make it a must-have accessory for winter.', 'CozyBlanketFan2023', 'Soft and comfortable!', 4.6, 'https://assets.winni.in/product/primary/2023/12/92581.jpeg?dpr=1&w=500'),
+    ('Red Christmas Cupcakes', 39.99, 'Elevate your holiday decor with this handcrafted wreath. Adorned with festive decorations and vibrant colors, it adds a touch of elegance to any space.', 'WreathArtist2023', 'Absolutely stunning!', 4.8, 'https://assets.winni.in/product/primary/2022/12/80329.jpeg?dpr=1&w=80'),
+    ('Christmas Collection Combo', 29.99, 'Create a warm and inviting atmosphere with this set of holiday scented candles. Each candle is carefully crafted to evoke the essence of Christmas.', 'CandleLover2023', 'Festive and aromatic!', 4.5, 'https://assets.winni.in/product/primary/2022/11/79447.jpeg?dpr=1&w=500'),
+    ('Christmas Couple Cushion', 24.99, 'Personalize your Christmas celebrations with this customized Christmas stocking. Embroidered with a name of your choice, it adds a special touch to your holiday traditions.', 'PersonalizedGifts2023', 'Perfect for hanging by the fireplace!', 4.6, 'https://assets.winni.in/product/primary/2022/11/77950.jpeg?dpr=1&w=80'),
+    ('Big Champion Chocolate Christmas', 34.99, 'Delight loved ones with this decorative music box playing classic Christmas tunes. Its charming design and nostalgic melodies make it a timeless holiday gift.', 'MusicBoxCollector2023', 'Charming and festive!', 4.7, 'https://assets.winni.in/product/primary/2022/11/78467.jpeg?dpr=1&w=500'),
+    ('Merry Christmas Caricature', 59.99, 'Warm up this Christmas with a deluxe hot chocolate gift set. Complete with gourmet toppings, its a delicious way to spread holiday cheer.', 'HotChocolateConnoisseur2023', 'Decadent and indulgent!', 4.8, 'https://assets.winni.in/product/primary/2022/11/78101.jpeg?dpr=1&w=500');
+
+
+--------------------------------------------------------------------------------------------------------------
+
+
+PRODUCT_EASTER
+
+
+
+
+
+-- Create product table
+CREATE TABLE product_easter (
+    product_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100),
+    price DECIMAL(10,2),
+    description TEXT,
+    buyer_name VARCHAR(100),
+    review TEXT,
+    ratings DECIMAL(3,2),
+    imageUrl VARCHAR(255) DEFAULT NULL
+);
+
+-- Insert sample data into the product table
+INSERT INTO product_easter (product_name, price, description, buyer_name, review, ratings, imageUrl)
+VALUES
+    ('Show Your Passion', 49.99, 'Indulge in a delightful collection of assorted chocolates this Easter. Each piece is carefully crafted to offer a burst of flavors, making it a perfect treat for any chocolate lover.', 'Emily', 'Great assortment, loved the flavors!', 4.5, 'https://assets.winni.in/product/primary/2014/6/31477.jpeg?dpr=1&w=400'),
+    ('Enchanting Floral Delights Collection', 39.99, 'Experience the beauty of spring with our beautifully arranged floral chocolates. Each chocolate is not only delicious but also a visual delight, perfect for celebrating Easter.', 'Sarah', 'Stunning presentation and delicious taste.', 4.2, 'https://assets.winni.in/product/primary/2023/6/85541.jpeg?dpr=1&w=400'),
+    ('Lovable Easter Bunny Chocolate', 19.99, 'Delight in adorable bunny-shaped chocolates this Easter. These charming treats are sure to bring smiles to faces young and old alike, making them a wonderful addition to any Easter celebration.', 'Michael', 'Perfect Easter treat for kids!', 4.0, 'https://assets.winni.in/product/primary/2022/3/58383.jpeg?dpr=1&w=300'),
+    ('Easter Chocolate Egg Gift Box', 29.99, 'Celebrate Easter with our exclusive Easter-themed chocolate eggs. Presented in a decorative box, these eggs are not only a treat for the taste buds but also a delightful gift for loved ones.', 'Jessica', 'Lovely gift box, enjoyed by everyone!', 4.3, 'https://assets.winni.in/product/primary/2023/3/83593.jpeg?dpr=1&w=400'),
+    ('Sugar Free Chocolate Easter Eggs Gift Basket', 34.99, 'Enjoy guilt-free indulgence with our assorted sugar-free chocolate eggs this Easter. Perfect for those with dietary restrictions, these chocolates are as delicious as they are wholesome.', 'David', 'Great for those avoiding sugar, tasty!', 4.1, 'https://assets.winni.in/product/primary/2023/3/83594.jpeg?dpr=1&w=400'),
+    ('Premium Box Of Assorted Chocolates', 59.99, 'Treat yourself to our high-quality selection of assorted chocolates this Easter. Each piece is a testament to craftsmanship and flavor, making it a decadent choice for any chocolate connoisseur.', 'Sophia', 'Absolutely decadent, worth every penny.', 4.7, 'https://assets.winni.in/product/primary/2024/1/93521.jpeg?dpr=1&w=400'),
+    ('Dairy Milk Chocolate Basket', 24.99, 'Indulge in our basket filled with creamy dairy milk chocolates this Easter. Simple yet delicious, these chocolates are perfect for sharing and enjoying with loved ones.', 'Daniel', 'Simple yet delicious chocolates.', 3.8, 'https://assets.winni.in/product/primary/2014/10/49715.jpeg?dpr=1&w=400'),
+    ('Easter Bunny Coffee Mug', 14.99, 'Start your Easter mornings with our cute Easter bunny design coffee mug. Its adorable design adds a touch of whimsy to your coffee or tea time, making it a perfect gift for the season.', 'Olivia', 'Adorable design, perfect gift!', 4.4, 'https://assets.winni.in/product/primary/2022/4/59122.jpeg?dpr=1&w=300');
+
+
+------------------------------------------------------------------------------------------------------
+
+
+
+PRODUCT_MOTHERSDAY
+
+
+
+
+
+-- Create products1 table
+CREATE TABLE product_mothersday (
+    product_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100),
+    price DECIMAL(10,2),
+    description TEXT,
+    buyer_name VARCHAR(100),
+    review TEXT,
+    ratings DECIMAL(3,2),
+    imageUrl VARCHAR(255) DEFAULT NULL
+);
+
+-- Insert Mother's Day gifts data into products
+INSERT INTO product_mothersday (product_name, price, description, buyer_name, review, ratings, imageUrl)
+VALUES
+    ('Pink Roses Of Happiness', 89.99, 'Indulge your mom with this pampering spa set for a luxurious Mother''s Day treat. It includes soothing bath salts, fragrant candles, and a soft robe for ultimate relaxation.', 'SpaLover2023', 'Absolutely divine!', 4.8, 'https://assets.winni.in/product/primary/2022/8/73051.jpeg?dpr=1&w=350'),
+    ('Mesmeric Pink Roses Box', 59.99, 'Surprise your mom with this elegant jewelry box featuring custom engraving options for Mother''s Day. Its crafted from fine wood with velvet lining to store her cherished jewelry pieces.', 'JewelryEnthusiast2023', 'Beautiful craftsmanship!', 4.7, 'https://assets.winni.in/product/primary/2023/1/82036.jpeg?dpr=1&w=350'),
+    ('Magic Mug', 49.99, 'Delight your mom with this exquisite assortment of gourmet chocolates for a sweet Mother''s Day surprise. Each chocolate is handcrafted with the finest ingredients to satisfy her sweet tooth.', 'ChocoLoverMom', 'Decadent and delicious!', 4.9, 'https://assets.winni.in/product/primary/2022/5/60843.jpeg?dpr=1&w=500'),
+    ('Mom Love Moon Lamp', 39.99, 'Brighten Mother''s Day with this vibrant bouquet of fresh flowers. Hand-picked and beautifully arranged, these flowers symbolize your love and appreciation for her.', 'FlowerEnthusiast2023', 'Absolutely stunning!', 4.6, 'https://assets.winni.in/product/primary/2022/3/58222.jpeg?dpr=1&w=400'),
+    ('Mothers Day Pink Heart Cushion', 99.99, 'Treat your mom to this sophisticated set of luxury perfumes for a special Mother''s Day gift. Each perfume is carefully selected for its exquisite fragrance and elegance.', 'PerfumeLoverMom', 'Exquisite fragrance collection!', 4.7, 'https://assets.winni.in/product/primary/2023/5/84781.jpeg?dpr=1&w=500'),
+    ('Beautiful White Mothers Day Mug', 29.99, 'Capture cherished memories with this customized photo frame for Mother''s Day. Personalize it with your favorite photo to create a heartwarming gift that shell treasure.', 'MemoryKeeper2023', 'Heartwarming and personalized!', 4.5, 'https://assets.winni.in/product/primary/2023/4/84037.jpeg?dpr=1&w=500'),
+    ('Mums Gratitude', 69.99, 'Enhance Mother''s Day tea parties with this stylish tea set. It features elegant teacups and a matching teapot, perfect for sharing moments of gratitude and love.', 'TeaLoverMom2023', 'Classy and elegant!', 4.6, 'https://assets.winni.in/product/primary/2014/10/48673.jpeg?dpr=1&w=500'),
+    ('Best Mom In The World Mothers Day Table Top', 79.99, 'Create a calming atmosphere with this handcrafted collection of artisanal candles for Mother''s Day. Each candle is crafted with care to offer relaxation and beauty.', 'CandleEnthusiast2023', 'Calming and beautiful!', 4.8, 'https://assets.winni.in/product/primary/2023/4/84239.jpeg?dpr=1&w=500');
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+PRODUCT_FATHERSDAY
+
+
+
+CREATE TABLE product_fathersday (
+    product_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100),
+    price DECIMAL(10, 2),
+    description TEXT,
+    buyer_name VARCHAR(100),
+    review TEXT,
+    ratings DECIMAL(3, 2),
+    imageUrl VARCHAR(255) DEFAULT NULL
+);
+
+INSERT INTO product_fathersday (product_name, price, description, buyer_name, review, ratings, imageUrl)
+VALUES 
+('Personalised Vibrant Photo To Art Mug', 299, 'A personalized mug featuring a vibrant and artistic conversion of your chosen photo. Perfect for daily use and a thoughtful gift that captures cherished memories in a unique way.', 'Alice Smith', 'Loved it! The photo to art conversion is amazing.', 4.5, 'https://assets.winni.in/product/primary/2024/4/95145.jpeg?dpr=1&w=400'),
+('Yardley Black And Gold Kit For Men', 1500, 'A premium grooming kit from Yardley, designed for men. This kit includes a collection of high-quality grooming essentials in an elegant black and gold packaging, making it an excellent gift for any occasion.', 'John Doe', 'Great quality and packaging. Highly recommend.', 4.7, 'https://assets.winni.in/product/primary/2024/5/95448.jpeg?dpr=1&w=400'),
+('Mens Silver Bracelet', 1200, 'A stylish and elegant silver bracelet designed for men. This bracelet is crafted with precision and adds a touch of sophistication to any outfit. Perfect for daily wear or special occasions.', 'Michael Brown', 'Elegant and well-crafted. Perfect gift for any occasion.', 4.6, 'https://assets.winni.in/product/primary/2024/1/93432.jpeg?dpr=1&w=400'),
+('Wooden Brown Pen Stand With Buddha Statue And Watch', 560, 'A beautifully crafted wooden pen stand that comes with a serene Buddha statue and a functional watch. This elegant desk accessory adds a touch of tranquility and organization to any workspace.', 'Emily Davis', 'Beautiful and functional. Adds a nice touch to my desk.', 4.8, 'https://assets.winni.in/product/primary/2023/10/91373.jpeg?dpr=1&w=400'),
+('Heart Diamond Cut Light', 800, 'A stunning heart-shaped light with a diamond cut design. This decorative light adds a romantic and elegant ambiance to any room, making it perfect for special occasions or as a thoughtful gift.', 'Sophia Wilson', 'Absolutely stunning! The diamond cut is perfect.', 4.9, 'https://assets.winni.in/product/primary/2014/8/38292.jpeg?dpr=1&w=400'),
+('Moon Love Light', 2300, 'A charming moon-shaped light that emits a warm and cozy glow. Ideal for creating a relaxing atmosphere in the bedroom or living area, this light is a perfect gift for loved ones.', 'David Johnson', 'Gives a warm and cozy feeling. Perfect for the bedroom.', 4.4, 'https://assets.winni.in/product/primary/2021/12/56280.jpeg?dpr=1&w=400'),
+('My Hero Dad Beer Mug', 660, 'A high-quality beer mug with "My Hero Dad" printed on it. This mug is a great way to show appreciation for your father, making it a perfect gift for Fathers Day or any special occasion.', 'Chris Lee', 'My dad loved it! Great quality and design.', 4.5, 'https://assets.winni.in/product/primary/2014/6/30100.jpeg?dpr=1&w=400'),
+('My Super Dad Photo Frame', 500, 'A stylish photo frame with "My Super Dad" inscription. This frame is perfect for displaying cherished memories and makes an ideal gift for Fathers Day to show your love and appreciation.', 'Olivia Martinez', 'Perfect gift for Father\'s Day. My dad was very happy.', 4.7, 'https://www.fnp.com/images/pr/l/v200/my-super-dad-photo-frame_2.jpg');
+
+--------------------------------------------------------------------------------------------------------------------
+
+PRODUCT_VALENTINESDAY
+
+
+CREATE TABLE product_valentinesday (
+    product_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100),
+    price DECIMAL(10,2),
+    description TEXT,
+    buyer_name VARCHAR(100),
+    review TEXT,
+    ratings DECIMAL(3,2),
+    imageUrl VARCHAR(255) DEFAULT NULL
+);
+
+INSERT INTO product_valentinesday (product_name, price, description, buyer_name, review, ratings, imageUrl) VALUES
+('Radiant Rose Bliss With Ferrero', 2500, 'A delightful combination of radiant roses and Ferrero Rocher chocolates. The bouquet includes a dozen of the freshest and most vibrant roses, handpicked to ensure their beauty and fragrance. Paired with Ferrero Rocher chocolates, this gift is a perfect blend of elegance and sweetness, making it an ideal choice for expressing love and appreciation.', 'Alice Johnson', 'Absolutely loved it! The roses were fresh and the chocolates were delicious.', 4.8, 'https://assets.winni.in/product/primary/2024/1/93555.jpeg?dpr=1&w=400'),
+('Personalized Radiance Crossword Led Lamp', 1500, 'A unique LED lamp personalized with a crossword puzzle for a special touch. This lamp is designed to add a warm and cozy ambiance to any room. It features a crossword puzzle that can be customized with words that hold special meaning, making it a thoughtful and memorable gift for loved ones. The soft LED glow adds a touch of elegance and charm.', 'Bob Smith', 'The personalized crossword was a hit! Such a creative gift idea.', 4.6, 'https://assets.winni.in/product/primary/2024/1/92868.jpeg?dpr=1&w=400'),
+('Wonderful Bracelet', 1299, 'A beautiful bracelet to add a touch of elegance to any outfit. Crafted with precision and care, this bracelet features intricate designs and high-quality materials. It is versatile enough to be worn on any occasion, whether it is a casual day out or a formal event. The bracelet is not only stylish but also comfortable to wear, making it a perfect addition to any jewelry collection.', 'Cathy Brown', 'Lovely bracelet, perfect for everyday wear.', 4.5, 'https://assets.winni.in/product/primary/2014/10/48559.jpeg?dpr=1&w=400'),
+('Love Led Light', 2999, 'A charming LED light that spells out "Love", perfect for romantic settings. This LED light is designed to create a warm and inviting atmosphere in any room. The soft glow of the light adds a touch of romance and is perfect for setting the mood for special occasions or quiet evenings at home. It is a beautiful decorative piece that complements any decor.', 'David Wilson', 'The love LED light is beautiful and adds a cozy touch to our living room.', 4.7, 'https://assets.winni.in/product/primary/2014/10/47139.jpeg?dpr=1&w=400'),
+('Personalised Calender Photo Mug', 699, 'A personalized calendar photo mug, a perfect blend of utility and personalization. This mug features a calendar design with spaces for custom photos, making it a unique and practical gift. Each month showcases a different photo, allowing for a year full of cherished memories. Made from high-quality ceramic, the mug is both microwave and dishwasher safe.', 'Ella Davis', 'Great quality mug with lovely personalized photos. Perfect gift!', 4.9, 'https://assets.winni.in/product/primary/2023/12/92067.jpeg?dpr=1&w=400'),
+('Delightful Chocolates Wrapped With Sunshine', 898, 'A delightful assortment of chocolates wrapped in vibrant packaging. This selection includes a variety of premium chocolates, each offering a unique and indulgent flavor experience. The bright and cheerful packaging makes it a perfect gift for any occasion, spreading joy and sweetness with every bite.', 'Frank Thompson', 'The chocolates were delicious and the packaging was very cheerful.', 4.4, 'https://assets.winni.in/product/primary/2023/9/89276.jpeg?dpr=1&w=400'),
+('Heart Pendant', 1100, 'A delicate heart pendant, symbolizing love and affection. This pendant is crafted with precision and care, featuring a sleek and elegant design. It is made from high-quality materials to ensure durability and long-lasting shine. The heart-shaped pendant makes it a perfect gift for expressing love and appreciation to someone special.', 'Grace Lee', 'Beautiful pendant, my mother loved it!', 4.5, 'https://assets.winni.in/product/primary/2014/10/48556.jpeg?dpr=1&w=400'),
+('Name neon light', 2599, 'A personalized neon light displaying a name, perfect for adding a unique touch to any room. This neon light is custom-made to showcase any name or word of your choice, creating a personalized and stylish decor piece. It is perfect for bedrooms, living rooms, or even as a special gift for loved ones. The bright and vibrant glow adds a modern and trendy feel to any space.', 'Henry Clark', 'The neon light is awesome! It really adds a personal touch to the room.', 4.8, 'https://www.fnp.com/images/pr/l/v200/name-neon-light_3.jpg');
+
+
+------------------------------------------------------------------------------------------------------
+
+PRODUCT_BIRTHDAYS
+
+
+
+-- Create product_birthdays table
+CREATE TABLE product_birthdays (
+    product_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100),
+    price DECIMAL(10,2),
+    description TEXT,
+    buyer_name VARCHAR(100),
+    review TEXT,
+    ratings DECIMAL(3,2),
+    imageUrl VARCHAR(255) DEFAULT NULL
+);
+
+-- Insert sample data into the product_birthdays table
+INSERT INTO product_birthdays (product_name, price, description, buyer_name, review, ratings, imageUrl)
+VALUES
+    ('Fairy Lights photo Strips', 749.00, 'Illuminate your birthday celebrations with our Fairy Lights photo Strips. These lights create a magical ambiance and add a touch of sparkle to your special moments. Perfect for creating memorable photo backdrops and enhancing your party decor.', 'Thomas', 'Beautiful artwork, captures our story perfectly.', 4.8, 'https://assets.winni.in/product/primary/2022/4/59059.jpeg?dpr=1&w=400'),
+    ('Birthday Personalized Cushion', 599.00, 'Make their birthday extra special with our Birthday Personalized Cushion. This customized cushion is a thoughtful gift that adds a personal touch to their living space. Perfect for cozying up and cherishing fond memories.', 'John', 'High-quality and very practical gifts.', 4.7, 'https://assets.winni.in/product/primary/2023/3/83292.jpeg?dpr=1&w=400'),
+    ('Layered Roses Bouquet with Truffle', 1299.00, 'Surprise them with our Layered Roses Bouquet with Truffle. This stunning arrangement of red roses symbolizes love and admiration, making it an ideal gift for expressing heartfelt birthday wishes.', 'Sophia Brown', 'Gorgeous flowers, very fresh and well arranged.', 4.6, 'https://assets.winni.in/product/primary/2024/2/93915.jpeg?dpr=1&w=400'),
+    ('Premium Customized Office Accessories Combo', 1549.00, 'Elevate their workspace with our Premium Customized Office Accessories Combo. This contemporary gift set includes stylish office essentials that blend functionality with elegance, perfect for the modern professional.', 'Mike Johnson', 'Elegant and modern, loved by my partner.', 4.5,'https://assets.winni.in/product/primary/2023/8/88980.jpeg?dpr=1&w=400'),
+    ('Radiant Colors Personalized Temperature Bottle', 799.00, 'Keep them hydrated in style with our Radiant Colors Personalized Temperature Bottle. This sleek and vibrant bottle not only keeps beverages at the perfect temperature but also adds a personalized touch to their daily routine.', 'Anna Wilson', 'Creates a magical ambiance, very unique.', 4.4, 'https://assets.winni.in/product/primary/2023/5/84657.jpeg?dpr=1&w=400'),
+    ('Alluring Personalized Diary and Chocolate Combo', 1099.00, 'Treat them to our Alluring Personalized Diary and Chocolate Combo. Ideal for corporate buddies, friends, and relatives, this thoughtful gift combines a personalized diary with delicious chocolates for a memorable birthday surprise.', 'David Miller', 'Looks just like the photo, my dad loved it.', 4.9, 'https://assets.winni.in/product/primary/2023/3/83256.jpeg?dpr=1&w=400'),
+    ('Classic Personalized Diary with Keychain and pen', 1099.00, 'Gift them our Classic Personalized Diary with Keychain and Pen, elegantly packed in a premium gift box. This timeless gift set is perfect for capturing their thoughts and memories, accompanied by a stylish keychain and pen.', 'Linda Green', 'Nice Delivery', 4.6, 'https://assets.winni.in/product/primary/2023/8/88983.jpeg?dpr=1&w=400'),
+    ('Wonderful Bracelet', 699.00, 'Adorn their wrist with our Wonderful Bracelet collection. These luxurious bracelets are crafted with exquisite details and elegant designs, making them a perfect birthday gift that they'll cherish.', 'Chris Taylor', 'Exquisite selection, worth every penny.', 4.8, 'https://assets.winni.in/product/primary/2014/10/48559.jpeg?dpr=1&w=400');
+
+------------------------------------------------------------------------------------------------------
+
+PRODUCT_WEDDINGS
+
+CREATE TABLE product_wedding (
+    product_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100),
+    price DECIMAL(10,2),
+    description TEXT,
+    buyer_name VARCHAR(100),
+    review TEXT,
+    ratings DECIMAL(3,2),
+    imageUrl VARCHAR(255) DEFAULT NULL
+);
+INSERT INTO product_wedding (product_name, price, description, buyer_name, review, ratings, imageUrl)
+VALUES ('Led Engraved Couple Ring Frame',60.49,'Frame Material - Acrylic,colour-clear reqiured couple names.A sleek and elegant acrylic frame with LED lighting, customizable with the couples names.','customer25','good quality and packaging',4.7,'https://assets.winni.in/product/primary/2023/1/80899.jpeg?dpr=1&w=300'),
+('Wedding Couple Oil Painting',39.9,'Digitally Handmade Artwork by using a Wacom pad & Stylus pen.A beautiful, digitally handmade oil painting depicting a wedding couple.','sudhesharts','happy with the product output',4.5,'https://assets.winni.in/product/primary/2022/11/78900.jpeg?dpr=1&w=300'),
+('Big Day Couple Frame',49.9,'Golden and Sparkle Effect frame.A sparkling and golden frame perfect for showcasing a couples special day.','radhikasuresh','beautiful product',4.2,'https://assets.winni.in/product/primary/2023/3/83716.jpeg?dpr=1&w=300'),
+('Personalised Couples Engraved Key Chain',10.5,'A symbol of love and unity.An engraved keychain symbolizing love and unity, customizable with couple details.','keerthi kamal','very nice product',4.8,'https://assets.winni.in/product/primary/2024/4/94997.jpeg?dpr=1&w=300'),
+('Scarlet Rose Bouquet',19.2,'Flower Type: Red Roses.A stunning bouquet of scarlet red roses, perfect for romantic occasions. ','vedicmerchants','elegant flowers recieved',4.5,'https://assets.winni.in/product/primary/2022/6/61843.jpeg?dpr=1&w=400'),
+('Personalised Mug With Lucky Bamboo',43.2,'This mug is made of ceramic Plant Name - Two-Layer Lucky Bamboo Plant.A ceramic mug paired with a two-layer lucky bamboo plant, great for gifting.
+','suchienterprise','beautiful gifts recieved',4.0,'https://assets.winni.in/product/primary/2024/5/95505.jpeg?dpr=1&w=400'),
+('Personalized Blossom Hamper',15.6,'Personalized Female Hamper.A personalized hamper for women, including a variety of delightful products.','anithacreations','useful products',3.9,'https://assets.winni.in/product/primary/2023/8/88630.jpeg?dpr=1&w=400'),
+(' Assorted Laddoo Tin Mithai Box',12.2,'contains multiple assorted delicious sweets.A tin box containing assorted delicious laddoos, ideal for sweet lovers.','vineesh','sweets received are tasty',4.2,'https://assets.winni.in/product/primary/2023/5/85080.jpeg?dpr=1&w=400');
+
+----------------------------------------------------------------------------------------------
+
+PRODUCT_ANNIVERSARIES
+
+CREATE TABLE product_anniversaries (
+    product_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100),
+    price DECIMAL(10,2),
+    description TEXT,
+    buyer_name VARCHAR(100),
+    review TEXT,
+    ratings DECIMAL(3,2),
+    imageUrl VARCHAR(255) DEFAULT NULL
+);
+
+INSERT INTO product_anniversaries (product_name, price, description, buyer_name, review, ratings, imageUrl)
+VALUES
+    ('Happy 10th Anniversary Lyrics Photo Frame', 999.00, 'Celebrate a decade of love with our Happy 10th Anniversary Lyrics Photo Frame. This elegant frame showcases your favorite song lyrics, making it a perfect keepsake for your special milestone.', 'Alice Smith', 'Beautiful and sentimental, great quality.', 4.8, 'https://assets.winni.in/product/primary/2022/9/73645.jpeg?dpr=1&w=400'),
+    ('Happy 10th Anniversary Cushion', 699.00, 'Commemorate your 10th anniversary with our cozy Happy 10th Anniversary Cushion. This personalized cushion is a thoughtful gift that adds a touch of love to any living space.', 'John Doe', 'Soft and well-made, my wife loved it.', 4.7, 'https://assets.winni.in/product/primary/2022/9/73813.jpeg?dpr=1&w=400'),
+    ('Personalized Bottle Dairy Keychain Pen Combo', 1199.00, 'Gift them our Personalized Bottle, Diary, Keychain, and Pen Combo. This stylish set is perfect for daily use and makes a memorable anniversary present.', 'Sophia Brown', 'Very practical and stylish, highly recommend.', 4.6, 'https://assets.winni.in/product/primary/2024/2/93885.jpeg?dpr=1&w=400'),
+    ('Marriage Ceremony Pencil Art', 1499.00, 'Capture the beauty of your marriage ceremony with our exquisite Pencil Art. This detailed artwork is a unique and personal anniversary gift.', 'Mike Johnson', 'Incredible detail and craftsmanship, truly special.', 4.9, 'https://assets.winni.in/product/primary/2023/2/82690.jpeg?dpr=1&w=400'),
+    ('Bluetooth Speaker', 1999.00, 'Enhance your anniversary celebrations with our high-quality Bluetooth Speaker. This speaker offers superior sound quality and modern design, perfect for any occasion.', 'Anna Wilson', 'Great sound quality, we use it all the time.', 4.5, 'https://assets.winni.in/product/primary/2021/12/56293.jpeg?dpr=1&w=400'),
+    ('Everlasting Love Personalized Photo Lamp', 1799.00, 'Illuminate your love with our Everlasting Love Personalized Photo Lamp. This unique lamp features your favorite photo, creating a warm and romantic ambiance.', 'David Miller', 'Absolutely stunning, looks great in our bedroom.', 4.8, 'https://assets.winni.in/product/primary/2023/12/92092.jpeg?dpr=1&w=400'),
+    ('Unique Personalized Combo', 1599.00, 'Our Unique Personalized Combo includes a variety of customized gifts, perfect for celebrating your anniversary in a special way.', 'Linda Green', 'Such a thoughtful gift, everything was perfect.', 4.7, 'https://assets.winni.in/product/primary/2024/5/95499.jpeg?dpr=1&w=400'),
+    ('Elegant Gerberas And Truffle Cake Combo', 2299.00, 'Celebrate with elegance and taste with our Elegant Gerberas and Truffle Cake Combo. This delightful set includes a beautiful bouquet of gerberas and a delicious truffle cake.', 'Chris Taylor', 'The flowers were fresh and the cake was delicious.', 4.9, 'https://assets.winni.in/product/primary/2024/6/95735.jpeg?dpr=1&w=400');
+
+------------------------------------------------------------------------------------------------------
+
+
+PRODUCT_SUMMER
+
+CREATE TABLE product_summer (
+    product_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100),
+    price DECIMAL(10,2),
+    description TEXT,
+    buyer_name VARCHAR(100),
+    review TEXT,
+    ratings DECIMAL(3,2),
+    imageUrl VARCHAR(255) DEFAULT NULL
+);
+
+-- Insert sample data into the products table
+INSERT INTO product_summer (product_name, price, description, buyer_name, review, ratings, imageUrl)
+VALUES
+    ('Barbeque Grill Set', 59.99, 'Enhance your outdoor cooking experience with our Barbeque Grill Set. This complete grilling essentials kit includes all the tools you need – spatula, tongs, brush, skewers, and a convenient carrying case. Perfect for backyard BBQs, camping trips, and picnics.', 'TheChef', 'Its simple and convenient to use.', 4.8, 'https://th.bing.com/th/id/OIP.8p8Jl5QB-6oi8bf0FrZPMAAAAA?w=271&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+    ('Mango Hamper', 39.99, 'Treat yourself or someone special to our Mango Hamper, a delightful assortment of ripe, juicy mangoes. Packed with flavor and freshness, this gift is perfect for mango lovers and fruit enthusiasts alike.', 'MasonGreen', 'Delicious and juicy', 4.6, 'https://th.bing.com/th/id/OIP.wDifKCkq9aLXj_wTlaoOJwHaIN?w=159&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+    ('Sunglasses', 33.99, 'Step out in style and protect your eyes with our Sunglasses. These stylish shades are perfect for sunny days, offering both eye protection and enhancing your summer look. Available in various trendy designs to suit your personal style.', 'Lyla', 'Very stylish!', 4.9, 'https://th.bing.com/th/id/OIP.AXvpUaTGGuOQ9Rlf-juyVgHaJQ?w=192&h=240&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+    ('Swimwear', 19.99, 'Dive into summer fun with our Swimwear collection. Whether you’re lounging by the pool or enjoying beach adventures in the sun, our fashionable attire offers comfort, style, and the perfect fit for your aquatic activities.', 'mrgreen', 'Very nice. Highly recommend.', 4.9, 'https://th.bing.com/th/id/OIP.PhxxmGeU003ngwFiXnNNBgHaHa?w=192&h=192&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+    ('Summer Sun Hat', 19.99, 'Stay cool and protected from the sun with our Summer Sun Hat. Featuring a chic design and a stylish brim, this hat is your perfect companion for sunny days outdoors. Whether you’re gardening, at the beach, or simply enjoying the outdoors, our hat offers both style and sun protection.', 'RamSingh', 'Protects from sun. Good product.', 4.5, 'https://th.bing.com/th/id/OIP.uFNWS_PW9e5y16ubB9wJBgHaHd?w=190&h=191&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+    ('Beach Towel', 19.99, 'Wrap yourself in comfort and style with our Beach Towel. Made from absorbent materials and featuring vibrant designs, our oversized towels are perfect for lounging on sandy shores and enjoying a day at the beach. Choose from a variety of colorful patterns to suit your beach style.', 'Pam', 'Material is very thick.', 4.8, 'https://th.bing.com/th/id/OIP.TwkOmLPbeSfu3-8eHutfbAHaE8?w=241&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+    ('Portable Coolers', 69.99, 'Keep your drinks and snacks cool on-the-go with our Portable Coolers. Designed for convenience and efficiency, these compact, insulated containers are essential for picnics, beach trips, camping, and outdoor adventures. Enjoy chilled refreshments wherever you are.', 'LilyRose', 'Keeps drinks cool.', 4.9, 'https://th.bing.com/th/id/OIP.1hZpQKgtQPsb12TyFx5noQHaHa?w=214&h=214&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+    ('Insect Repellent', 29.99, 'Protect yourself from bugs and insects with our Insect Repellent. Ideal for outdoor activities in warm weather, our effective formula provides long-lasting protection and peace of mind, allowing you to enjoy the outdoors without worry.', 'MrsFamy', 'Protects from insects!', 4.6, 'https://th.bing.com/th/id/OIP.PbDpVxnwCgfP4oxyEbChHgHaHa?w=189&h=189&c=7&r=0&o=5&dpr=1.3&pid=1.7');
+
+----------------------------------------------------------------------------------------------------
+
+PRODUCT_SPRING
+
+
+-- Create product_spring table
+CREATE TABLE product_spring (
+    product_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100),
+    price DECIMAL(10,2),
+    description TEXT,
+    buyer_name VARCHAR(100),
+    review TEXT,
+    ratings DECIMAL(3,2),
+    imageUrl VARCHAR(255) DEFAULT NULL
+);
+
+-- Insert sample data into the product_spring table
+INSERT INTO product_spring (product_name, price, description, buyer_name, review, ratings, imageUrl)
+VALUES
+    ('Expoxy Resin pendant', 69.99, 'Enhance your style with the exquisite Epoxy Resin Pendant. This stunning accessory combines elegance with modern flair, making it a must-have for any fashion-conscious woman. Whether worn alone or layered, it adds a touch of sophistication to any outfit.', 'CraftStudio', 'Beautiful!', 4.8, 'https://th.bing.com/th/id/OIP.V7zO94ZROinjh35qjRbQmAHaHa?w=197&h=186&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+    ('Mesmerising Blue Orchids Vase', 99.99, 'Transform any space into a serene oasis with our Mesmerising Blue Orchids Vase. These vibrant blue orchids, delicately arranged in a charming vase, not only brighten up the room but also bring a sense of tranquility and natural beauty.', 'GreenThumb95', 'Healthy and vibrant!', 4.6, 'https://assets.winni.in/product/primary/2022/6/61648.jpeg?dpr=1&w=400'),
+    ('Floral Bath Bomb', 39.99, 'Experience pure indulgence with our Floral Bath Bomb. As it fizzes and dissolves in the water, it releases a fragrant burst of floral scents, creating a luxurious bathing experience. Perfect for unwinding after a long day.', 'Bath&Body', 'smells heavenly', 4.9, 'https://th.bing.com/th/id/OIP.IQMkwpdOxRLZHLL2Voju8QHaHa?w=174&h=186&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+    ('Picnic Kit', 99.99, 'Enjoy outdoor dining in style with our Picnic Kit. This portable set includes everything you need for a relaxing picnic: plates, utensils, a cozy blanket, and more. Whether in the park or by the beach, it ensures a memorable dining experience with family and friends.', 'NatureLover32', 'Perfect for picnic with family', 4.9, 'https://th.bing.com/th/id/OIP.OwnBNwKJwGi6V7nfvg0dDAHaF6?w=250&h=200&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+    ('Gardening tools', 69.99, 'Nurture your garden with our durable and ergonomic Gardening Tools. Designed for comfort and efficiency, these essential tools make planting, digging, and maintaining your garden a breeze. Ideal for both novice gardeners and seasoned enthusiasts.', 'MrTom', 'Highly recommended!', 4.5, 'https://th.bing.com/th/id/OIP.2sY-jW0qTShQoGdONZWbSgHaHa?w=216&h=216&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+    ('Floral Candles', 29.99, 'Create a soothing ambiance with our Floral Candles. Infused with delicate flower fragrances, these scented candles not only illuminate your space but also uplift your mood. Perfect for enhancing relaxation and adding a touch of elegance to any room.', 'PrettyCassey', 'Unique and heartwarming!', 4.8, 'https://th.bing.com/th/id/OIP.3wjrZKB5LmQ3Mizoi9X1CgHaHa?w=198&h=198&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+    ('Spa Kit', 69.99, 'Indulge in luxurious pampering with our Spa Kit. Complete with essential oils, bath salts, and soothing lotions, it offers everything you need for a rejuvenating at-home spa experience. Treat yourself to relaxation and self-care.', 'LilyRose', 'perfect relaxing activity!', 4.9, 'https://th.bing.com/th/id/OIP.6XEjlvX79IOPvezqGLOVLgHaHa?w=215&h=215&c=7&r=0&o=5&dpr=1.3&pid=1.7'),
+    ('Floral Crown craft Kit', 39.99, 'Unleash your creativity with our Floral Crown Craft Kit. This DIY kit includes all the supplies you need to create beautiful, personalized flower crowns. Perfect for crafting enthusiasts and anyone looking to add a touch of floral beauty to their style.', 'MrsFamy', 'Fun, easy floral crown kit; beautiful, realistic results!', 4.6, 'https://th.bing.com/th/id/OIP.qdxagZkKHYDEsampYvPmxgHaIS?w=175&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7');
+
+--------------------------------------------------------------------------------------------------------
+
+PRODUCT_FALL
+
+CREATE TABLE product_fall (
+    product_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100),
+    price DECIMAL(10,2),
+    description TEXT,
+    buyer_name VARCHAR(100),
+    review TEXT,
+    ratings DECIMAL(3,2),
+    imageUrl VARCHAR(255) DEFAULT NULL
+);
+
+
+INSERT INTO product_fall (product_name, price, description, buyer_name, review, ratings, imageUrl) VALUES
+('Warm Knit Hats', 19.99, 'Soft and cozy knit hats, perfect for chilly days. Keep yourself stylishly warm this season with these high-quality hats.', 'Alice Smith', 'Very warm and stylish.', 4.5, 'https://m.media-amazon.com/images/I/71uRjIz5fBL.AC_UL480_FMwebp_QL65.jpg'),
+('Thick Woolen Thumb Socks Pack of 3 Pairs', 29.99, 'Stay snug with these luxurious woolen socks. Designed for comfort and warmth, they are essential for cold winter nights.', 'Bob Johnson', 'Luxurious and warm.', 4.2, 'https://m.media-amazon.com/images/I/91Ze9ATHJ2S.SX679.jpg'),
+('Woolen Women Casual Scarf Soft Wrap', 39.99, 'Wrap yourself in elegance with these long woolen scarves. Featuring a stylish checkered pattern, they add flair to any outfit.', 'Catherine Lee', 'Stylish and warm.', 4.7, 'https://m.media-amazon.com/images/I/51oZCvxtdHL.AC_UL480_FMwebp_QL65.jpg'),
+('Knit Wool Windproof ', 24.99, 'Adorable and functional knit hats with lamb ear design. Keep warm while looking cute in these windproof winter essentials.', 'David Brown', 'Adorable and warm.', 4.4, 'https://m.media-amazon.com/images/I/61OPCcAHnaL.SX679.jpg'),
+('Cotton Full Sleeves Jumper Women', 49.99, 'Stay fashionable and warm with these cozy cotton jumpers. Perfect for layering during the cold winter months.', 'Emma Davis', 'Stylish and comfortable.', 4.6, 'https://m.media-amazon.com/images/I/31JkgjYdclL.AC_UL480_FMwebp_QL65.jpg'),
+('Winter Muffler for Women – Soft Woolen Muffler', 34.99, 'Embrace comfort with this soft woolen muffler. Ideal for adding warmth and style to your winter wardrobe.', 'Frank Harris', 'Soft and warm.', 4.8, 'https://m.media-amazon.com/images/I/71QrvgJTW2L.AC_UL480_FMwebp_QL65.jpg'),
+('Soft Faux Fur Beanie Panda Cap ', 19.99, 'Stay cozy with this adorable panda cap. Featuring faux fur and earflaps, it''s both cute and practical for winter adventures.', 'Grace Wilson', 'Cute and warm.', 4.3, 'https://m.media-amazon.com/images/I/317lLEtgTrL.jpg'),
+('Boys Hoodie', 39.99, 'Stay trendy and warm with this stylish hoodie. Designed for comfort and durability, it''s a must-have for casual winter wear.', 'Henry Martinez', 'Trendy and comfortable.', 4.1, 'https://m.media-amazon.com/images/I/41mRcKOWgML.jpg');
+
+-----------------------------------------------------------------------------------------------------------------------------
